@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://use.typekit.net/gvm5wla.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#backdrop{
+  position: absolute;
+  z-index: 10;
+  isolation: isolate;
+  height: max-content;
+  width: max-content;
+}
+
+#root{
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 250px;
+  min-height: 100vh;
+  background-color: #151515;
+  color: white;
+}
+
+a{
+  font-family: "Oswald",sans-serif;
+  font-optical-sizing: auto;
+}
