@@ -15,7 +15,7 @@ const useBelowMaxPoint = (breakPoint) => {
     window.addEventListener("load",checkSize);
     return () => {
       window.removeEventListener("resize",checkSize);
-      window.removeEventListener("load",checkSize);
+      document.removeEventListener("load",checkSize);
     };
   }, []);
   return breaked;

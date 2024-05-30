@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -6,7 +6,7 @@ import { SiYoutube } from "react-icons/si";
 import { CgMenuGridO } from "react-icons/cg";
 import Backdrop from "./backdrop";
 import { screenCheckContext } from "../../context/screens-context";
-
+let initiateNav = false;
 function Nav({ children, ...props }) {
   return (
     <nav
@@ -21,7 +21,12 @@ function Nav({ children, ...props }) {
 Nav.Offcanvas = function Offcanvas({ children, ...props }) {
   const isBreaked = useContext(screenCheckContext).isBelowMD;
   const [show, setShow] = useState(false);
-
+  useEffect(()=>{
+    initiateNav = true;
+  },[])
+  if(!initiateNav){
+    return;
+  }
   if (isBreaked) {
     let state = "-translate-y-full";
     if (show) {
@@ -102,7 +107,7 @@ Nav.NavLink = function Link({ children, className, activeClass, ...props }) {
 
 Nav.SocialIcons = function Icons({ ...props }) {
   return (
-    <div className="flex gap-5 w-full md:w-auto justify-center">
+    <div className="flex gap-5 w-full md:w-auto justify-center" {...props}>
       <a
         className={"hover:text-blue-900 decoration-0 transition-colors"}
         href="#"

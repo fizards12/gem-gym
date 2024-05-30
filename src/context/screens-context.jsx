@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 import useBelowMaxPoint from "../hooks/use-belowMaxPoint";
 
 export const screenCheckContext = createContext({
