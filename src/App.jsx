@@ -3,15 +3,15 @@ import Root from "./pages/root"
 import lazyLoadPage from "./hoc/lazyLoadPage";
 import ErrorPage from "./pages/error";
 
-const Home = lazyLoadPage("../pages/home.jsx")
-const About = lazyLoadPage("../pages/about-us.jsx")
-const RoutesRoot = lazyLoadPage("../components/root.jsx");
-const ClassesTable = lazyLoadPage("../pages/classes/time-table.jsx");
-const Services = lazyLoadPage("../pages/services.jsx");
-const TeamPage = lazyLoadPage("../pages/our-team.jsx");
-const Contact = lazyLoadPage("../pages/contact.jsx");
-const Blog = lazyLoadPage("../pages/our-blog.jsx");
-const BlogPost = lazyLoadPage("../pages/blog-post.jsx");
+const Home = lazyLoadPage(()=>import("./pages/home.jsx"))
+const About = lazyLoadPage(()=>import("./pages/about-us.jsx"))
+const RoutesRoot = lazyLoadPage(()=>import("./components/root.jsx"));
+const ClassesTable = lazyLoadPage(()=>import("./pages/classes/time-table.jsx"));
+const Services = lazyLoadPage(()=>import("./pages/services.jsx"));
+const TeamPage = lazyLoadPage(()=>import("./pages/our-team.jsx"));
+const Contact = lazyLoadPage(()=>import("./pages/contact.jsx"));
+const Blog = lazyLoadPage(()=>import("./pages/our-blog.jsx"));
+const BlogPost = lazyLoadPage(()=>import("./pages/blog-post.jsx"));
 function App() {
   
   return (
