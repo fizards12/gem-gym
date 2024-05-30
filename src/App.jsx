@@ -6,7 +6,7 @@ import ErrorPage from "./pages/error";
 const Home = lazyLoadPage(()=>import("./pages/home.jsx"))
 const About = lazyLoadPage(()=>import("./pages/about-us.jsx"))
 const RoutesRoot = lazyLoadPage(()=>import("./components/root.jsx"));
-const ClassesTable = lazyLoadPage(()=>import("./pages/classes/time-table.jsx"));
+const ClassDetails = lazyLoadPage(()=>import("./pages/classes/class-details.jsx"));
 const Services = lazyLoadPage(()=>import("./pages/services.jsx"));
 const TeamPage = lazyLoadPage(()=>import("./pages/our-team.jsx"));
 const Contact = lazyLoadPage(()=>import("./pages/contact.jsx"));
@@ -22,8 +22,8 @@ function App() {
             <Route path="" element={<Home/>}/>
             <Route path="about-us" element={<About/>}/>
             <Route path="classes" element={<RoutesRoot title={"CLASSES"}/>}>
-              <Route path="" element={<Navigate to={"time-table"}/>}/>
-              <Route path="time-table" element={<ClassesTable/>}/>
+              <Route path="" element={<Navigate to={"class-details"}/>}/>
+              <Route path="class-details" element={<ClassDetails/>}/>
             </Route>
             <Route path="services" element={<Services/>}/>
             <Route path="our-team" element={<TeamPage/>}/>
