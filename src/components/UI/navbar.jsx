@@ -6,6 +6,7 @@ import { SiYoutube } from "react-icons/si";
 import { CgMenuGridO } from "react-icons/cg";
 import Backdrop from "./backdrop";
 import { screenCheckContext } from "../../context/screens-context";
+
 function Nav({ children, ...props }) {
   return (
     <nav
@@ -20,21 +21,20 @@ function Nav({ children, ...props }) {
 Nav.Offcanvas = function Offcanvas({ children, ...props }) {
   const isBreaked = useContext(screenCheckContext).isBelowMD;
   const [show, setShow] = useState(false);
-  const [initiate, setInitiate] = useState(false);
+  const [showNav, setShowNav] = useState(false);
+  
   useEffect(() => {
-    if (!initiate) {
-      setInitiate(true);
-    }
-    console.log("initiated");
+  setTimeout(()=>{
+    setShowNav(true);
+  },300)
   }, []);
-
 
   if (isBreaked) {
     let state = "-translate-y-full";
     if (show) {
       state = "";
     }
-    return initiate && (
+    return showNav && (
       <>
         {
           <div
@@ -60,7 +60,7 @@ Nav.Offcanvas = function Offcanvas({ children, ...props }) {
       </>
     );
   } else {
-    return initiate && (<>{children}</>);
+    return showNav && (<>{children}</>);
   }
 };
 
