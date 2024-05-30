@@ -17,7 +17,7 @@ const Slides = forwardRef(function Slides({ children, ...props }, ref) {
   return (
     <Carousel
       {...props}
-      className={`md:h-1040 sm:h-screen min-h-min`}
+      className={`md:h-1040 min-h-min`}
       loop
       transition={{ type: "spring", bounce: 0.1 }}
       navigation={() => <></>}

@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
-import Slides from "../../UI/carousel";
-import hero1 from "../../../assets/hero/hero-1.jpg";
-import hero2 from "../../../assets/hero/hero-2.jpg";
+import Slides from "../UI/carousel";
+import hero1 from "../../assets/hero/hero-1.jpg";
+import hero2 from "../../assets/hero/hero-2.jpg";
 import { Button } from "@material-tailwind/react";
 
 const variants = {

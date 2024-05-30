@@ -3,16 +3,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+
 
 #backdrop{
   position: absolute;
   z-index: 10;
   isolation: isolate;
-  height: max-content;
-  width: max-content;
+}
+
+#modal{
+  z-index: 50;
 }
 
 #root{
@@ -23,6 +27,8 @@ body {
   margin: 0;
   display: flex;
   min-width: 250px;
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100vh;
   background-color: #151515;
   color: white;
@@ -31,4 +37,8 @@ body {
 a{
   font-family: "Oswald",sans-serif;
   font-optical-sizing: auto;
+}
+
+.comment::before{
+  content: "";
 }

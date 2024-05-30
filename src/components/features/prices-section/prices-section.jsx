@@ -1,7 +1,5 @@
-import React from "react";
 import Section from "../../UI/section";
 import PriceCard from "./price-card";
-import { Button } from "@material-tailwind/react";
 
 function Prices() {
   return (
@@ -9,6 +7,7 @@ function Prices() {
       <Section.Header
         title={"CHOOSE YOUR PRICING PLAN"}
         subTitle={"OUR PLAN"}
+        className={"text-center"}
       />
       <Section.Body
         className={

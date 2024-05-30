@@ -1,5 +1,4 @@
 import { Button, Card, CardBody, CardHeader } from "@material-tailwind/react";
-import React from "react";
 
 function PriceCard({ children, className, ...props }) {
   return (
@@ -9,7 +8,7 @@ function PriceCard({ children, className, ...props }) {
        max-w-80 w-full px-4 pt-6 pb-3
        bg-gray-900 text-orange-700
        group
-       hover:bg-orange-600 hover:text-white duration-300 transition-colors`}
+       hover:bg-orange-600 hover:scale-105 hover:text-white duration-300 transition-all`}
       {...props}
     >
       {children}

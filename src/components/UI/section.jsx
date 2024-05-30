@@ -1,9 +1,9 @@
 import React from "react";
 
-function Section({ children, className, ...props }) {
+function Section({ children, className,container=true, ...props }) {
   return (
     <div className={`${className || ""} py-20 px-2`} {...props}>
-      <div className={"container m-auto flex flex-col gap-7"}>
+      <div className={`${container?"container":""} m-auto flex flex-col gap-7`}>
         {children}
       </div>
     </div>
@@ -18,7 +18,7 @@ Section.Header = function Header({
   ...props
 }) {
   let content = (
-    <div className={`${className || ""} text-base`}>
+    <div className={`${className || ""} text-base uppercase`}>
       <p className="text-orange-900 font-semibold">{subTitle}</p>
       <h3 className="text-3xl font-oswald font-extrabold">{title}</h3>
     </div>
@@ -30,7 +30,7 @@ Section.Header = function Header({
     <div
       className={`${
         className || ""
-      } flex md:flex-row flex-col justify-between gap-3`}
+      } flex sm:flex-row flex-col justify-between items-start gap-3`}
     >
       {content}
       {children}

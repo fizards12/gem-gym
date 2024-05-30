@@ -11,9 +11,11 @@ const useBelowMaxPoint = (breakPoint) => {
         setIsBreaked(false);
       }
     };
-    window.onload = window.onresize = checkSize;
+    window.addEventListener("resize",checkSize);
+    window.addEventListener("load",checkSize);
     return () => {
-      document.onload = document.onresize = () => {};
+      window.removeEventListener("resize",checkSize);
+      window.removeEventListener("load",checkSize);
     };
   }, []);
   return breaked;

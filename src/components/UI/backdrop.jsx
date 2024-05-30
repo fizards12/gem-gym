@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 function Backdrop({ ...props }) {
@@ -15,7 +15,7 @@ function Backdrop({ ...props }) {
   }, []);
 
   const content = (
-    <div className={`w-full h-full opacity-60 bg-black`} {...props}></div>
+    <div className={`w-screen h-screen opacity-60 bg-black`} {...props}></div>
   );
   return createPortal(content, document.getElementById("backdrop"));
 }

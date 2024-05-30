@@ -21,6 +21,9 @@ function Navbar() {
             <Nav.NavLink to={"/our-team"}>
               Our Team
             </Nav.NavLink>
+            <Nav.NavLink to={"/our-blog"}>
+              Our Blog
+            </Nav.NavLink>
             <Nav.NavLink to={"/contact"}>
               Contact
             </Nav.NavLink>

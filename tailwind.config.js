@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('@material-tailwind/react').Config} */
 import withMT from "@material-tailwind/react/utils/withMT";
 const breakpoints = {
   sm: "640px",
@@ -28,11 +28,22 @@ export default withMT({
       "max-sm": { max: breakpoints.sm },
     },
     extend: {
+      scrollbar: {
+        'default': {
+          'thumb': 'bg-gray-500',
+          'track': 'bg-gray-300',
+        },
+        'rounded': {
+          'thumb': 'bg-blue-500 rounded-full',
+          'track': 'bg-gray-300',
+        },
+      },
       fontSize: {
         "8xl": 80,
       },
       height: {
         1040: 1040,
+        900:900
       },
       backgroundPosition: {
         "center-top": "center top",
@@ -47,10 +58,29 @@ export default withMT({
       },
       skew:{
         "4":"4deg"
+      },
+      backgroundColor:{
+        "gray-950": "#0a0a0a"
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-thin': {
+          'scrollbar-width': 'thin',
+        },
+        '.scrollbar-none': {
+          'scrollbar-width': 'none',
+        },
+        '.scrollbar-track': {
+          'scrollbar-color': 'rgba(255,255,255,0.5) transparent',
+        },
+      }
+
+      addUtilities(newUtilities, ['responsive', 'hover'])
+    }
+  ],
 });
 
 // export default {

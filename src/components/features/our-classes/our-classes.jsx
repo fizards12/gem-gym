@@ -4,9 +4,7 @@ import img2 from "../../../assets/classes/class-2.jpg";
 import img3 from "../../../assets/classes/class-3.jpg";
 import img4 from "../../../assets/classes/class-4.jpg";
 import img5 from "../../../assets/classes/class-5.jpg";
-import { Button } from "@material-tailwind/react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 function Classes() {
   return (
     <Section>

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { SiYoutube } from "react-icons/si";
 import { CgMenuGridO } from "react-icons/cg";
-import useBelowMaxPoint from "../../hooks/use-belowMaxPoint";
 import Backdrop from "./backdrop";
+import { screenCheckContext } from "../../context/screens-context";
 
 function Nav({ children, ...props }) {
   return (
@@ -19,7 +19,7 @@ function Nav({ children, ...props }) {
 }
 
 Nav.Offcanvas = function Offcanvas({ children, ...props }) {
-  const isBreaked = useBelowMaxPoint(768);
+  const isBreaked = useContext(screenCheckContext).isBelowMD;
   const [show, setShow] = useState(false);
 
   if (isBreaked) {

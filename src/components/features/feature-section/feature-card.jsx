@@ -1,5 +1,4 @@
 import { Card, CardBody, CardHeader } from "@material-tailwind/react";
-import React from "react";
 
 function FeatureCard({ className,children, ...props }) {
   return (

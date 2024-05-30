@@ -7,7 +7,7 @@ import FeatureCard from "./feature-card";
 
 function Features() {
   return (
-    <Section className={"bg-black"}>
+    <Section className={"bg-gray-950"}>
       <Section.Header
         className={"text-center"}
         title={"PUSH YOUR LIMITS FORWARD"}
