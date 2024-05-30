@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -21,20 +21,12 @@ function Nav({ children, ...props }) {
 Nav.Offcanvas = function Offcanvas({ children, ...props }) {
   const isBreaked = useContext(screenCheckContext).isBelowMD;
   const [show, setShow] = useState(false);
-  const [showNav, setShowNav] = useState(false);
-  
-  useEffect(() => {
-  setTimeout(()=>{
-    setShowNav(true);
-  },300)
-  }, []);
-
   if (isBreaked) {
     let state = "-translate-y-full";
     if (show) {
       state = "";
     }
-    return showNav && (
+    return (
       <>
         {
           <div
@@ -60,7 +52,7 @@ Nav.Offcanvas = function Offcanvas({ children, ...props }) {
       </>
     );
   } else {
-    return showNav && (<>{children}</>);
+    return (<>{children}</>);
   }
 };
 

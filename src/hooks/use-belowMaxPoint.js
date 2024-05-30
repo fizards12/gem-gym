@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 const useBelowMaxPoint = (breakPoint) => {
-  const [breaked, setIsBreaked] = useState(true);
+  const [breaked, setIsBreaked] = useState(window.innerWidth < +breakPoint);
   const checkSize = useCallback(() => {
     const currentWidth = +window.innerWidth;
     if (breakPoint && !isNaN(+breakPoint) && currentWidth < (+breakPoint)) {
@@ -12,10 +12,8 @@ const useBelowMaxPoint = (breakPoint) => {
   },[]);
   useEffect(() => {
     window.addEventListener("resize",checkSize);
-    window.addEventListener("load",checkSize);
     return () => {
       window.removeEventListener("resize",checkSize);
-      document.removeEventListener("load",checkSize);
     };
   }, [checkSize]);
   return breaked;
