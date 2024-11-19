@@ -17,6 +17,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+
 import { IoIosHeart, IoIosMail } from "react-icons/io";
 import {
   Avatar,
