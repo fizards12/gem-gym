@@ -1,10 +1,10 @@
 import React from "react";
 import Section from "../../UI/section";
 import ServicesCard from "./service-card";
-import service1 from "../../../assets/services/services-1.jpg";
+import service1 from "../../../assets/services/services-2.jpg";
 import service2 from "../../../assets/services/services-2.jpg";
-import service3 from "../../../assets/services/services-3.jpg";
-import service4 from "../../../assets/services/services-4.jpg";
+import service3 from "../../../assets/services/services-2.jpg";
+import service4 from "../../../assets/services/services-2.jpg";
 function ServicesSection() {
   return (
     <Section>

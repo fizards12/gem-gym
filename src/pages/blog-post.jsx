@@ -1,10 +1,10 @@
 import Section from "../components/UI/section";
 import HeroHeader from "../components/features/blog-post-parts/header";
 import img1 from "../assets/blog/details/details-1.jpg";
-import img2 from "../assets/blog/details/details-2.jpg";
+import img2 from "../assets/blog/details/details-1.jpg";
 import comment1 from "../assets/blog/details/comment-1.jpg";
-import comment2 from "../assets/blog/details/comment-2.jpg";
-import comment3 from "../assets/blog/details/comment-3.jpg";
+import comment2 from "../assets/blog/details/comment-1.jpg";
+import comment3 from "../assets/blog/details/comment-1.jpg";
 import authorImg from "../assets/blog/details/blog-profile.jpg";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import PopularTags from "../components/UI/chips";

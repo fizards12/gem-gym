@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import PopularTags from "../../UI/chips";
 import post1 from "../../../assets/letest-blog/latest-1.jpg";
 import post2 from "../../../assets/letest-blog/latest-2.jpg";
-import post3 from "../../../assets/letest-blog/latest-3.jpg";
-import post4 from "../../../assets/letest-blog/latest-4.jpg";
-import post5 from "../../../assets/letest-blog/latest-5.jpg";
+import post3 from "../../../assets/letest-blog/latest-1.jpg";
+import post4 from "../../../assets/letest-blog/latest-2.jpg";
+import post5 from "../../../assets/letest-blog/latest-1.jpg";
 
 const types = [
   { name: "Yoga", num: 12 },

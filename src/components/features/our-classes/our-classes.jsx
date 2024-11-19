@@ -1,7 +1,7 @@
 import Section from "../../UI/section";
 import ClassCard from "./class-card";
-import img2 from "../../../assets/classes/class-2.jpg";
-import img3 from "../../../assets/classes/class-3.jpg";
+import img2 from "../../../assets/classes/class-4.jpg";
+import img3 from "../../../assets/classes/class-5.jpg";
 import img4 from "../../../assets/classes/class-4.jpg";
 import img5 from "../../../assets/classes/class-5.jpg";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
